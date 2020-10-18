@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <context id="DB2Tables" targetRuntime="MyBatis3">
+        <!--数据库连接地址及账号密码-->
+        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/flash_sale?serverTimezone=GMT%2B8"
+                        userId="root"
+                        password="AlohaMySQL8.">
+        </jdbcConnection>
+
+        <!-- 生成 DataObject 类存放位置 -->
+        <javaModelGenerator targetPackage="com.jzp.dataobject" targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+
+        <!-- 生成映射文件存放位置 -->
+        <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources">
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+
+        <!-- 生成 Mapper 类的存放位置 -->
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.jzp.mapper" targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+
+        <!-- 生成对应表及类名 -->
+        <!--
+        <table tableName="user_information" domainObjectName="User"
+               enableInsert="true"
+               enableSelectByExample="false"
+               enableDeleteByPrimaryKey="false"
+               enableDeleteByExample="false"
+               enableCountByExample="false"
+               enableUpdateByExample="false"
+               enableSelectByPrimaryKey="true"
+               enableUpdateByPrimaryKey="true"/>
+        -->
+        <!--
+        <table tableName="user_password" domainObjectName="UserPassword"
+               enableInsert="true"
+               enableSelectByExample="false"
+               enableDeleteByPrimaryKey="false"
+               enableDeleteByExample="false"
+               enableCountByExample="false"
+               enableUpdateByExample="false"
+               enableSelectByPrimaryKey="true"
+               enableUpdateByPrimaryKey="true"/>
+        -->
+        <!--
+        <table tableName="item" domainObjectName="Item"
+               enableInsert="true"
+               enableSelectByExample="false"
+               enableDeleteByPrimaryKey="false"
+               enableDeleteByExample="false"
+               enableCountByExample="false"
+               enableUpdateByExample="false"
+               enableSelectByPrimaryKey="true"
+               enableUpdateByPrimaryKey="true"/>
+        -->
+        <!--
+        <table tableName="item_stock" domainObjectName="ItemStock"
+               enableInsert="true"
+               enableSelectByExample="false"
+               enableDeleteByPrimaryKey="false"
+               enableDeleteByExample="false"
+               enableCountByExample="false"
+               enableUpdateByExample="false"
+               enableSelectByPrimaryKey="true"
+               enableUpdateByPrimaryKey="true"/>
+         -->
+        <!--
+        <table tableName="order_information" domainObjectName="Order"
+               enableInsert="true"
+               enableSelectByExample="false"
+               enableDeleteByPrimaryKey="false"
+               enableDeleteByExample="false"
+               enableCountByExample="false"
+               enableUpdateByExample="false"
+               enableSelectByPrimaryKey="true"
+               enableUpdateByPrimaryKey="true"/>
+        -->
+        <!--
+        <table tableName="sequence" domainObjectName="Sequence"
+               enableInsert="true"
+               enableSelectByExample="false"
+               enableDeleteByPrimaryKey="false"
+               enableDeleteByExample="false"
+               enableCountByExample="false"
+               enableUpdateByExample="false"
+               enableSelectByPrimaryKey="true"
+               enableUpdateByPrimaryKey="true"/>
+         -->
+        <!--
+        <table tableName="promo" domainObjectName="Promo"
+               enableInsert="true"
+               enableSelectByExample="false"
+               enableDeleteByPrimaryKey="false"
+               enableDeleteByExample="false"
+               enableCountByExample="false"
+               enableUpdateByExample="false"
+               enableSelectByPrimaryKey="true"
+               enableUpdateByPrimaryKey="true"/>
+        -->
+        <table tableName="stock_log" domainObjectName="StockLog"
+               enableInsert="true"
+               enableSelectByExample="false"
+               enableDeleteByPrimaryKey="false"
+               enableDeleteByExample="false"
+               enableCountByExample="false"
+               enableUpdateByExample="false"
+               enableSelectByPrimaryKey="true"
+               enableUpdateByPrimaryKey="true"/>
+    </context>
+</generatorConfiguration>

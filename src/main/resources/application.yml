@@ -1,0 +1,40 @@
+# Server
+server:
+  port: 8888
+
+# MyBatis
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+
+spring:
+  # 数据库连接池
+  datasource:
+    # MySQL 8 之后需要使用 com.mysql.cj.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # MySQL 8 之后需要使用添加时区参数
+    url: jdbc:mysql://localhost:3306/flash_sale?serverTimezone=GMT%2B8
+    username: root
+    password: AlohaMySQL8.
+    # 使用 Druid 数据库连接池
+    type: com.alibaba.druid.pool.DruidDataSource
+  # 异常处理
+  mvc:
+    throw-exception-if-no-handler-found: true
+  resources:
+    add-mappings: false
+  # Redis
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    database: 9
+    # jedis 连接池
+    jedis:
+      pool:
+        max-active: 50
+        min-idle: 20
+
+# 异步消息队列
+mq:
+  nameserver:
+    addr: 39.98.227.211:9876
+  topicname: stock
